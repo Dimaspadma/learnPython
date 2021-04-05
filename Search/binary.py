@@ -17,11 +17,12 @@ found = False
 while left <= right and not found:
 
     middle = (right + left) // 2
+    
+    middleValue = L[middle]
 
     # Debug
     print("L:{}, M:{}, R:{}".format(L[left], L[middle], L[right]))
 
-    middleValue = L[middle]
 
     # check if item equal to an item on middle of list
     if find == middleValue:
