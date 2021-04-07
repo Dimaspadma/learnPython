@@ -3,9 +3,13 @@
 
 # This algorithm must be a sorted list
 
-L = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# L = [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11]
 
-find = 10
+L = [0]*100
+for i in range(0, 100):
+    L[i] = i
+
+find = 99
 
 # key to identified a left, middle, and right list
 left = 0
@@ -26,7 +30,6 @@ while left <= right and not found:
 
     # check if item equal to an item on middle of list
     if find == middleValue:
-        print("Found it")
         found = True
         
     # if item greater than middle Value, then slide left key to middle and divide again
@@ -37,5 +40,7 @@ while left <= right and not found:
     elif find < middleValue:
         right = middle - 1
 
+if found:
+    print("Found it")
 else:
     print("Nope")
